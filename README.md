@@ -1,9 +1,7 @@
 # Javasript_Essentials
 
-Okay, here are precise answers with examples for your JavaScript interview questions.
-
 ---
-**JavaScript Interview Questions (General)**
+**JavaScript Questions (General)**
 ---
 
 1.  **What are the different data types present in javascript?**
