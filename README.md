@@ -1978,8 +1978,83 @@ A higher-order function is a function that can accept other functions as argumen
 What is the purpose of the setTimeout() function in JavaScript?
 The setTimeout() function is used to execute a function or a piece of code after a specified delay (in milliseconds).
 
-How can you check if an array includes a certain value?
-The includes() method is used to check if an array includes a certain value. It returns true if the value is found, and false otherwise.
+What are the different data types in JavaScript?
+JavaScript has two types of data: primitive and non-primitive.
+Primitive data types: string, number, boolean, undefined, null, symbol, bigint
+Non-Primitive data types: objects, arrays and functions.
+
+2. What is the difference between == and === in JavaScript?
+== (loose equality): They compares only the values, allowing type coercion (i.e., converts types if necessary).
+=== (strict equality): They compares both value and type, without type conversion.
+
+3. What is the difference between let, const, and var?
+var: Function-scoped, can be re-assigned and redeclared within its scope.
+let: Block-scoped, can be reassigned but not redeclared within the same scope.
+const: Block-scoped, cannot be reassigned or redeclared, and the value assigned to it remains constant.
+
+4. Explain hoisting in JavaScript.
+Hoisting is JavaScript's default behavior of moving all variable and function declarations to the top of their containing scope during the compile phase. However, only the declarations are hoisted, not the initialization.
+
+5. What is the difference between null and undefined in JavaScript?
+null: Represents an intentional absence of any object value. It is explicitly assigned to indicate "no value."
+undefined: Indicates that a variable has been declared but has not yet been assigned a value.
+let a = null;    // Explicitly assigned nulllet b;           // Variable declared but not assigned, hence undefined
+
+6. What are promises in JavaScript and how do they work?
+A promise is an object representing the eventual completion or failure of an asynchronous operation. Promises are used to handle asynchronous operations like API calls, ensuring cleaner code compared to callbacks. It has three states:
+pending: The initial state.
+fulfilled: The operation completed successfully.
+rejected: The operation failed.
+const myPromise = new Promise((resolve, reject) => { 
+ let success = true;    
+if (success) {       
+ resolve("Operation was successful");   
+ }
+ else {
+    reject("Operation failed");    
+}});
+myPromise.then(result => console.log(result)).catch(error => console.log(error));
+
+7. What is the event loop in JavaScript?
+The event loop is a mechanism that allows JavaScript to handle asynchronous operations (like I/O, timers, etc.) without blocking the main thread. It continuously checks the call stack for any code to execute and moves tasks from the callback queue to the call stack when the stack is empty.
+
+8. What are closures in JavaScript?
+A closure is a function that retains access to its lexical scope (the scope in which it was created) even after that scope has finished execution. Closures allow functions to access variables from an outer function after the outer function has returned.
+function outer() {
+    let x = 10;
+    return function inner() {
+        console.log(x);
+    }
+}
+const closureFunc = outer();
+closureFunc(); // prints 10
+Output
+10
+
+9. Explain the concept of this in JavaScript.
+In JavaScript, the this keyword refers to the context in which a function is called. It is used to refer to the object that is executing the current piece of code.
+The value of this can change depending on how the function is called. Here are the different scenarios where this behaves differently:
+Global context: In non-strict mode, this refers to the global object (window in browsers).
+Object method: this refers to the object the method belongs to.
+Constructor function: this refers to the instance of the object being created.
+Arrow functions: In arrow functions, this is lexically bound to the surrounding context.
+
+10. What is a callback function in JavaScript?
+A callback function in JavaScript is a function that is passed as an argument to another function and is executed after the completion of that function. Callback functions are primarily used for handling asynchronous operations, such as API requests or timeouts, ensuring that certain code runs only after a specific task is completed.
+function greet(name, callback) {
+    console.log("Hello " + name);
+    callback();
+}
+​
+function sayGoodbye() {
+    console.log("Goodbye!");
+}
+​
+greet("Anjali", sayGoodbye);
+
+Output
+Hello Anjali
+Goodbye!
 ```
 ---
 
