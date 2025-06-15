@@ -1946,7 +1946,8 @@
 
     **In summary, you don't "do" anything special to enable lexical scoping; it's the default and only scoping mechanism for variable resolution in JavaScript (for user-defined variables). Your task as a developer is to understand how it works to write predictable and maintainable code.** The JavaScript engine handles the "practice" of lexical scoping during parsing and execution.
 
-** Most asked questions with Short answers**
+  ```javascript
+**Most asked questions with Short answers**
 Explain the differences between var, let, and const:
 var has function scope and can be reassigned and redeclared within its scope.
 let has block scope and can be reassigned but not redeclared within its scope.
@@ -1979,6 +1980,7 @@ The setTimeout() function is used to execute a function or a piece of code after
 
 How can you check if an array includes a certain value?
 The includes() method is used to check if an array includes a certain value. It returns true if the value is found, and false otherwise.
+```
 ---
 
 Good luck to all aspiring developers!
