@@ -1946,8 +1946,39 @@
 
     **In summary, you don't "do" anything special to enable lexical scoping; it's the default and only scoping mechanism for variable resolution in JavaScript (for user-defined variables). Your task as a developer is to understand how it works to write predictable and maintainable code.** The JavaScript engine handles the "practice" of lexical scoping during parsing and execution.
 
+** Most asked questions with Short answers**
+Explain the differences between var, let, and const:
+var has function scope and can be reassigned and redeclared within its scope.
+let has block scope and can be reassigned but not redeclared within its scope.
+const has block scope and cannot be reassigned or redeclared once initialized.
 
+What is a closure in JavaScript?
+A closure is a function that has access to variables from an outer function even after the outer function has finished executing. Closures "remember" the environment in which they were created.
 
+Explain scope and scope chain in JavaScript.
+Scope determines the accessibility of variables and functions at various parts of the code. There are three types of scopes: global scope, function scope, and block scope.
+The scope chain is used by the JavaScript engine to find variables. If a variable is not found in the local scope, it checks the outer scope, and finally the global scope.
+
+What is hoisting in JavaScript?
+Hoisting is a JavaScript concept where variable and function declarations are moved to the top of their scope before code execution. This allows variables and functions to be used before they are declared, as long as they are declared before they are used in a function.
+
+What is the purpose of async and await in JavaScript?
+async and await are used for asynchronous programming in JavaScript. The async keyword is used to declare an asynchronous function, which automatically returns a promise. The await keyword is used to wait for a promise to resolve before continuing the execution of the function.
+
+Explain the difference between == and === operators.
+The == operator compares values after performing type coercion if necessary. The === operator compares both values and types without type coercion.
+
+What is the difference between passed by value and passed by reference?
+Primitive data types (like numbers, strings, and booleans) are passed by value, meaning a copy of the value is passed to the function. Non-primitive data types (like objects and arrays) are passed by reference, meaning a reference to the original object is passed.
+
+What is a higher-order function in JavaScript?
+A higher-order function is a function that can accept other functions as arguments or return functions as their results. Examples include map, filter, and reduce.
+
+What is the purpose of the setTimeout() function in JavaScript?
+The setTimeout() function is used to execute a function or a piece of code after a specified delay (in milliseconds).
+
+How can you check if an array includes a certain value?
+The includes() method is used to check if an array includes a certain value. It returns true if the value is found, and false otherwise.
 ---
 
 Good luck to all aspiring developers!
